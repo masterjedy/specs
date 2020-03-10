@@ -6,7 +6,7 @@ DagPB does not support the full ["IPLD Data Model."](../../data-model-layer/data
 
 ## Format
 
-The DagPB IPLD format is a format implemented with a single protobuf.
+The DagPB IPLD format is a format implemented with a single protobuf:
 
 ```protobuf
 // An IPFS MerkleDAG Link
@@ -35,6 +35,21 @@ message PBNode {
 
 The objects link names are specified in the 'Name' field of the PBLink object.
 All link names in an object must either be omitted or unique within the object.
+
+This layout can be expressed with [IPLD Schemas](../../schemas/README.md) as:
+
+```ipldsch
+type PBLink struct {
+  hash optional Bytes
+  name optional String
+  tsize optional Int
+}
+
+type PBNode struct {
+  links [PBLink]
+  data Bytes
+}
+```
 
 ## Pathing
 
