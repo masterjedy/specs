@@ -39,7 +39,6 @@ All link names in an object must either be omitted or unique within the object.
 ## Logical Format
 
 When we handle DagPB content at the Data Model level, we treat these objects as maps.
-The map keys correspond to the lowercase field names.
 
 This layout can be expressed with [IPLD Schemas](../../schemas/README.md) as:
 
@@ -77,7 +76,6 @@ The Go and JavaScript implementation both support pathing with link names: `/<na
 In Go, this is the only way, which implies that is is impossible to path through nodes that don't name their links. Also neither the Data section nor the Links section/metadata are accessible through paths.
 
 In the JavaScript implementation, there is an additional way to path through the data. It's based purely on the structure of object, i.e. `/Links/<index>/Hash/…`. This way you have direct access to the `Data`, `Links`, and `size` fields, e.g. `/Links/<index>/Hash/Data`.
-(Note that here, for legacy reasons, Capitalized Names are used for the fields, whereas the [logical format](#logical-format) uses lowercase.)
 
 These two ways of pathing can be combined, so you can access e.g. the `Data` field of a named link via `/<name/Data`. You can also use both approaches within a single path, e.g. `/<name1>/Links/0/Hash/Data` or `/Links/<index>/Hash/<name>/Data`. When using the DAG API in js-ipfs, then the pathing over the structure has precedence, so you won't be able to use named pathing on a named link called `Links`, you would need to use the index of the link instead.
 
