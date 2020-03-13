@@ -45,14 +45,14 @@ This layout can be expressed with [IPLD Schemas](../../schemas/README.md) as:
 
 ```ipldsch
 type PBLink struct {
-  hash optional Bytes
-  name optional String
-  tsize optional Int
+  Hash Bytes
+  Name optional String
+  Tsize optional Int
 }
 
 type PBNode struct {
-  links [PBLink]
-  data Bytes
+  Links [PBLink]
+  Data Bytes
 }
 ```
 
