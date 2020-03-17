@@ -50,8 +50,8 @@ type PBLink struct {
 }
 
 type PBNode struct {
-  Links [PBLink]
-  Data Bytes
+  Links optional [PBLink]
+  Data optional Bytes
 }
 ```
 
