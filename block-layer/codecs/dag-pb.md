@@ -65,7 +65,7 @@ If additional fields are present, the DagPB codec will error, because there is n
 
 ## Alternative Pathing
 
-While the [logical format](#logical-format) implicitly describes set of mechanisms for pathing over and through DagPB data,
+While the [logical format](#logical-format) implicitly describes a set of mechanisms for pathing over and through DagPB data,
 DagPB also enjoys some other special forms of pathing in addition to the Data Model norms, and these are supported by most major applications that use DagPB.
 
 This alternative pathing is covered here as part of this descriptive spec, but was developed independently of the Data Model and is thus not well standardized.
