@@ -41,7 +41,7 @@ This layer model is a simplified hierarchy of IPLD concepts and requirements.
 
 The block layer encompasses all content addressed block formats and specifies how blocks are addressed, how they self-describe their codec for encoding/decoding, and how blocks link between each other.
 
-This layer alone is enough to accomplish basic graph replication across a variety of formats (eth, bitcoin, git, dag-pb, dag-cbor, etc).
+This layer alone is enough to accomplish basic graph replication across a variety of formats (Ethereum, Bitcoin, Git, DAG-PB, DAG-CBOR, etc).
 
 This layer does not define data structures or types, although many codecs may convert these formats into native types, there are no type requirements or assurances about types at the block layer.
 
@@ -54,8 +54,8 @@ This layer does not define data structures or types, although many codecs may co
 | [Concept: Multihash](block-layer/multihash.md) | [block-layer/multihash.md](block-layer/multihash.md) |
 | [Concept: Serialization and Formats](block-layer/serialization-and-formats.md) | [block-layer/serialization-and-formats.md](block-layer/serialization-and-formats.md) |
 | [Specification: CIDs](block-layer/CID.md) | [block-layer/CID.md](block-layer/CID.md) |
-| [Specification: DagCBOR](block-layer/codecs/dag-cbor.md) | [block-layer/codecs/dag-cbor.md](block-layer/codecs/dag-cbor.md) |
-| [Specification: DAG-JSON](block-layer/codecs/DAG-JSON.md) | [block-layer/codecs/DAG-JSON.md](block-layer/codecs/DAG-JSON.md) |
+| [Specification: DAG-CBOR](block-layer/codecs/dag-cbor.md) | [block-layer/codecs/dag-cbor.md](block-layer/codecs/dag-cbor.md) |
+| [Specification: DAG-JSON](block-layer/codecs/dag-json.md) | [block-layer/codecs/dag-json.md](block-layer/codecs/dag-json.md) |
 | [Specification: IPLD Selectors](selectors/selectors.md) | [selectors/selectors.md](selectors/selectors.md) |
 | [Specification: Graphsync](block-layer/graphsync/graphsync.md) | [block-layer/graphsync/graphsync.md](block-layer/graphsync/graphsync.md) |
 | [Specification: Content Addressable aRchives (CAR / .car)](block-layer/content-addressable-archives.md) | [block-layer/content-addressable-archives.md](block-layer/content-addressable-archives.md) |
@@ -112,6 +112,18 @@ In many cases these specifications are not intended to drive new implementations
 
 Documents labelled "Specification" in this repository will also be labelled with a descriptor that indicates the category and status.
 e.g. _"Status: Prescriptive - Draft"_ or _"Status: Descriptive - Final"_.
+
+## Design documentation & Library recommendations
+
+Included in this repository are some documents which chronicle our process in developing these specs,
+as well as some documents which are advisory to library authors (but not specifications, per se):
+
+- [design/...](/design) -- gathers all such documents
+- [design/history/...](/design/history) -- gathers research work and pre-spec content and notes
+- [design/libraries/...](/design/libraries) -- gathers recommendations for library authors
+
+These documents may be useful to read for those who want to participate more deeply in the
+design and specification processes (as well as implementation processes!) of IPLD.
 
 ## Contributing & Discussion
 
